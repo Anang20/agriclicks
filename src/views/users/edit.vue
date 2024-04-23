@@ -6,7 +6,7 @@
         </h3>
       </div>
       <v-card class="px-5 mt-4">
-        <v-form>
+        <v-form v-model="formValid">
           <v-container>
             <v-row>
               <v-col cols="12" lg="6">
@@ -107,5 +107,21 @@
     { label: "Nonaktif", value: false },
   ];
   
+  onMounted(async () => {
+    const userId = route.params.id;
+    await getDetailUser(userId);
+  });
+  
+  const getDetailUser = async (userId) => {
+    try {
+      const { data } = await http.get(`/users/${userId}`);
+      if (data) {
+        formData.value = data;
+      }
+    } catch (err) {
+      window.alert(err?.message);
+    }
+  };
+
   </script>
   
