@@ -1,86 +1,116 @@
 {
-    "profit": [
-      {
-        "month": "Jan",
-        "value": 2500000,
-        "id": "a2cf"
-      },
-      {
-        "month": "Feb",
-        "value": 2000000,
-        "id": "3278"
-      },
-      {
-        "month": "Apr",
-        "value": 1900000,
-        "id": "3e58"
-      },
-      {
-        "month": "May",
-        "value": 3000000,
-        "id": "6969"
-      },
-      {
-        "month": "Jun",
-        "value": 4500000,
-        "id": "14bd"
-      },
-      {
-        "month": "Jul",
-        "value": 2000000,
-        "id": "5c42"
-      },
-      {
-        "month": "Aug",
-        "value": 2200000,
-        "id": "d2f5"
-      },
-      {
-        "month": "Sep",
-        "value": 2700000,
-        "id": "da9a"
-      },
-      {
-        "month": "Oct",
-        "value": 3500000,
-        "id": "2d99"
-      },
-      {
-        "month": "Nov",
-        "value": 2500000,
-        "id": "8bd9"
-      },
-      {
-        "month": "Dec",
-        "value": 5000000,
-        "id": "3712"
-      }
-    ],
-    "topFiveBuyer": [
-      {
-        "name": "Anang",
-        "cost": 10000000,
-        "id": "8823"
-      },
-      {
-        "name": "John",
-        "cost": 7000000,
-        "id": "8493"
-      },
-      {
-        "name": "Apri",
-        "cost": 5000000,
-        "id": "6e5d"
-      },
-      {
-        "name": "Yuda",
-        "cost": 3000000,
-        "id": "410a"
-      },
-      {
-        "name": "Fernanda",
-        "cost": 2500000,
-        "id": "e2a2"
-      }
-    ]
-  }
+  "profit": [
+    {
+      "month": "Jan",
+      "value": 2500000,
+      "id": "a2cf"
+    },
+    {
+      "month": "Feb",
+      "value": 2000000,
+      "id": "3278"
+    },
+    {
+      "month": "Apr",
+      "value": 1900000,
+      "id": "3e58"
+    },
+    {
+      "month": "May",
+      "value": 3000000,
+      "id": "6969"
+    },
+    {
+      "month": "Jun",
+      "value": 4500000,
+      "id": "14bd"
+    },
+    {
+      "month": "Jul",
+      "value": 2000000,
+      "id": "5c42"
+    },
+    {
+      "month": "Aug",
+      "value": 2200000,
+      "id": "d2f5"
+    },
+    {
+      "month": "Sep",
+      "value": 2700000,
+      "id": "da9a"
+    },
+    {
+      "month": "Oct",
+      "value": 3500000,
+      "id": "2d99"
+    },
+    {
+      "month": "Nov",
+      "value": 2500000,
+      "id": "8bd9"
+    },
+    {
+      "month": "Dec",
+      "value": 5000000,
+      "id": "3712"
+    }
+  ],
+  "topFiveBuyer": [
+    {
+      "name": "Anang",
+      "cost": 10000000,
+      "id": "8823"
+    },
+    {
+      "name": "John",
+      "cost": 7000000,
+      "id": "8493"
+    },
+    {
+      "name": "Apri",
+      "cost": 5000000,
+      "id": "6e5d"
+    },
+    {
+      "name": "Yuda",
+      "cost": 3000000,
+      "id": "410a"
+    },
+    {
+      "name": "Fernanda",
+      "cost": 2500000,
+      "id": "e2a2"
+    }
+  ],
+  "users": [
+    {
+      "id": "n3yxsimv",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "user123",
+      "status": true
+    },
+    {
+      "id": "2gtpnxqq",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "user212",
+      "status": true
+    },
+    {
+      "id": "p9547dy7",
+      "name": "anang",
+      "email": "anang@gmail",
+      "password": "Anang1234",
+      "status": true
+    },
+    {
+      "id": "fogxu0d8",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "tesT12345",
+      "status": true
+    }
+  ]
+}

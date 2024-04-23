@@ -25,6 +25,14 @@ const routes = [
       layout: DefaultLayout,
     },
   },
+  {
+    path: '/users/detail/:id',
+    name: 'user detail',
+    component: () => import('@/views/users/detail.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
+  },
 ];
 
 export default routes;
