@@ -91,6 +91,22 @@
     { label: "Nonaktif", value: false },
   ];
   
+  onMounted(async () => {
+    const userId = route.params.id;
+    await getDetailUser(userId);
+  });
+  
+  const getDetailUser = async (userId) => {
+    try {
+      const { data } = await http.get(`/users/${userId}`);
+      if (data) {
+        formData.value = data;
+      }
+    } catch (err) {
+      window.alert(err?.message);
+    }
+  };
+  
   const toEditPage = () => {
     router.push(`/users/edit/${route.params.id}`);
   };
