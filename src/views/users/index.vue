@@ -74,6 +74,7 @@
   
         <v-card-actions class="my-2 d-flex justify-end">
           <v-btn
+            @click="handleDelete"
             class="text-none"
             color="primary"
             rounded="xl"
@@ -146,6 +147,29 @@
   const handleOpenModalDelete = (data) => {
     itemId.value = data.id;
     isModalDelete.value = true;
+  };
+  
+  const handleDelete = async () => {
+    try {
+      const data = await http.delete(`/users/${itemId.value}`);
+      if (data.status == 200) {
+        isModalDelete.value = false;
+        Swal.fire({
+          title: "Berhasil!",
+          text: "Berhasil menghapus user",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
+        await getUser();
+      }
+    } catch (err) {
+      Swal.fire({
+        title: "Gagal!",
+        text: "Opps, gagal menghapus user",
+        icon: "error",
+        confirmButtonText: "Close",
+      });
+    }
   };
   
   const handleCloseDelete = () => {
