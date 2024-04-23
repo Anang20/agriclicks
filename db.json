@@ -112,5 +112,21 @@
       "password": "tesT12345",
       "status": true
     }
+  ],
+  "produksi": [
+    {
+      "id": "23frfr",
+      "name": "Telur",
+      "qty": "1333333",
+      "price": 8000,
+      "animal": "Ayam Petelur"
+    },
+    {
+      "id": "y4lwldjw",
+      "name": "Daging Wagyu",
+      "qty": "20",
+      "price": "5000000",
+      "animal": "Sapi"
+    }
   ]
 }

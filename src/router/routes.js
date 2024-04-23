@@ -41,6 +41,14 @@ const routes = [
       layout: DefaultLayout,
     },
   },
+  {
+    path: '/produksi',
+    name: 'produksi',
+    component: () => import('@/views/produksi/index.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
+  },
 ];
 
 export default routes;
