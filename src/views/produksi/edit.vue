@@ -6,7 +6,7 @@
         </h3>
       </div>
       <v-card class="px-5 mt-4">
-        <v-form>
+        <v-form @submit.prevent="handleSubmit" v-model="formValid">
           <v-container>
             <v-row>
               <v-col cols="12" lg="6">
@@ -120,6 +120,30 @@
     } catch (err) {
       window.alert(err?.message);
     }
+  };
+  
+  const handleSubmit = () => {
+    http
+      .put(`/produksi/${route.params.id}`, formData.value)
+      .then((res) => {
+        if (res.status == 200) {
+          Swal.fire({
+            title: "Berhasil!",
+            text: "Berhasil mengubah produk",
+            icon: "success",
+            confirmButtonText: "Close",
+          });
+          router.push("/produksi");
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          title: "Gagal!",
+          text: "Opps, gagal mengubah produk",
+          icon: "error",
+          confirmButtonText: "Close",
+        });
+      });
   };
   </script>
   
