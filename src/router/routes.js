@@ -9,6 +9,14 @@ const routes = [
       layout: DefaultLayout,
     },
   },
+  {
+    path: '/users',
+    name: 'users',
+    component: () => import('@/views/users/index.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
+  },
 ];
 
 export default routes;
