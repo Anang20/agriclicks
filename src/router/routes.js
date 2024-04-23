@@ -49,6 +49,14 @@ const routes = [
       layout: DefaultLayout,
     },
   },
+  {
+    path: '/produksi/add',
+    name: 'produksi add',
+    component: () => import('@/views/produksi/add.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
+  },
 ];
 
 export default routes;
