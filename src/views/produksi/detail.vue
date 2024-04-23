@@ -93,6 +93,22 @@
     { label: "Kerbau", value: 'Kerbau' },
   ];
   
+  onMounted(async () => {
+    const produkId = route.params.id;
+    await getDetailProduksi(produkId);
+  });
+  
+  const getDetailProduksi = async (produkId) => {
+    try {
+      const { data } = await http.get(`/produksi/${produkId}`);
+      if (data) {
+        formData.value = data;
+      }
+    } catch (err) {
+      window.alert(err?.message);
+    }
+  };
+  
   const toEditPage = () => {
     router.push(`/produksi/edit/${route.params.id}`);
   };
