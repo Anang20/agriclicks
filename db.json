@@ -100,16 +100,9 @@
     },
     {
       "id": "p9547dy7",
-      "name": "anang",
+      "name": "anang syah",
       "email": "anang@gmail",
       "password": "Anang1234",
-      "status": true
-    },
-    {
-      "id": "fogxu0d8",
-      "name": "test",
-      "email": "test@gmail.com",
-      "password": "tesT12345",
       "status": true
     }
   ],
@@ -126,6 +119,69 @@
       "name": "Daging Wagyu",
       "qty": "20",
       "price": "5000000",
+      "animal": "Sapi"
+    },
+    {
+      "id": "kjcfxwvm",
+      "name": "Daging Bebek",
+      "qty": "250",
+      "price": "50000",
+      "animal": "Bebek"
+    },
+    {
+      "id": "wdfx716e",
+      "name": "Daging Ayam",
+      "qty": "210",
+      "price": "50000",
+      "animal": "Ayam"
+    },
+    {
+      "id": "7jrcafjr",
+      "name": "Daging Kambing",
+      "qty": "59",
+      "price": "60000",
+      "animal": "Kambing"
+    },
+    {
+      "id": "gw8g0a9p",
+      "name": "Susu Kambing",
+      "qty": "100",
+      "price": "10000",
+      "animal": "Kambing"
+    },
+    {
+      "id": "4ngzolp4",
+      "name": "Susu Sapi",
+      "qty": "500",
+      "price": "20000",
+      "animal": "Kambing"
+    },
+    {
+      "id": "jt130ufg",
+      "name": "Telur Asin",
+      "qty": "150",
+      "price": "20000",
+      "animal": "Bebek"
+    },
+    {
+      "id": "t2ycn1ha",
+      "name": "Daging Kerbau",
+      "qty": "20",
+      "price": "75000",
+      "animal": "Kerbau"
+    },
+    {
+      "id": "aidsp7ls",
+      "name": "Bulu Bebek",
+      "qty": "300",
+      "price": "50000",
+      "animal": "Bebek"
+    },
+    {
+      "id": "4ag7hgza",
+      "name": "Kulit Sapi",
+      "qty": "200",
+      "price": "200000",
       "animal": "Sapi"
     }
   ]
