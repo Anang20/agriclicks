@@ -33,6 +33,14 @@ const routes = [
       layout: DefaultLayout,
     },
   },
+  {
+    path: '/users/edit/:id',
+    name: 'user edit',
+    component: () => import('@/views/users/edit.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
+  },
 ];
 
 export default routes;
