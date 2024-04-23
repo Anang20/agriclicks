@@ -6,7 +6,7 @@
         </h3>
       </div>
       <v-card class="px-5 mt-4">
-        <v-form v-model="formValid">
+        <v-form @submit.prevent="handleSubmit" v-model="formValid">
           <v-container>
             <v-row>
               <v-col cols="12" lg="6">
@@ -42,6 +42,7 @@
                     density="comfortable"
                     placeholder="Masukkan Password"
                     variant="solo-filled"
+                    :rules="passwordValidationRules"
                   ></v-text-field>
                 </div>
               </v-col>
@@ -122,6 +123,29 @@
       window.alert(err?.message);
     }
   };
-
+  
+  const handleSubmit = () => {
+    http
+      .put(`/users/${route.params.id}`, formData.value)
+      .then((res) => {
+        if (res.status == 200) {
+          Swal.fire({
+            title: "Berhasil!",
+            text: "Berhasil mengubah user",
+            icon: "success",
+            confirmButtonText: "Close",
+          });
+          router.push("/users");
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          title: "Gagal!",
+          text: "Opps, gagal mengubah user",
+          icon: "error",
+          confirmButtonText: "Close",
+        });
+      });
+  };
   </script>
   
