@@ -4,7 +4,7 @@
         Tambah Produk
       </h3>
       <v-card class="px-5 mt-2">
-        <v-form>
+        <v-form @submit.prevent="handleSubmit" v-model="formValid">
           <v-container>
             <v-row>
               <v-col cols="12" lg="6">
@@ -105,5 +105,29 @@
   const numberValidationRules = [
     (v) => /^[0-9]$/.test(v)
   ];
+  
+  const handleSubmit = () => {
+    http
+      .post("/produksi", formData.value)
+      .then((res) => {
+        if (res.status == 201) {
+          Swal.fire({
+            title: "Berhasil!",
+            text: "Berhasil menambah produk",
+            icon: "success",
+            confirmButtonText: "Close",
+          });
+          router.push("/produksi");
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          title: "Gagal!",
+          text: "Opps, gagal menambah produk",
+          icon: "error",
+          confirmButtonText: "Close",
+        });
+      });
+  };
   </script>
   
