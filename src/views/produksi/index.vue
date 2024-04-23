@@ -66,7 +66,7 @@
         </v-card-text>
   
         <v-card-actions class="my-2 d-flex justify-end">
-          <v-btn color="primary">Hapus</v-btn>
+          <v-btn @click="handleDelete" color="primary">Hapus</v-btn>
         </v-card-actions>
       </Modal>
     </div>
@@ -128,6 +128,29 @@
   const handleOpenModalDelete = (data) => {
     itemId.value = data.id;
     isModalDelete.value = true;
+  };
+  
+  const handleDelete = async () => {
+    try {
+      const data = await http.delete(`/produksi/${itemId.value}`);
+      if (data.status == 200) {
+        isModalDelete.value = false;
+        Swal.fire({
+          title: "Berhasil!",
+          text: "Berhasil menghapus produk",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
+        await getProduksi();
+      }
+    } catch (err) {
+      Swal.fire({
+        title: "Gagal!",
+        text: "Opps, gagal menghapus produk",
+        icon: "error",
+        confirmButtonText: "Close",
+      });
+    }
   };
   
   const handleCloseDelete = () => {
