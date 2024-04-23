@@ -106,5 +106,20 @@
     { label: "Kerbau", value: "Kerbau" },
   ];
   
+  onMounted(async () => {
+    const produkId = route.params.id;
+    await getDetailProduk(produkId);
+  });
+  
+  const getDetailProduk = async (produkId) => {
+    try {
+      const { data } = await http.get(`/produksi/${produkId}`);
+      if (data) {
+        formData.value = data;
+      }
+    } catch (err) {
+      window.alert(err?.message);
+    }
+  };
   </script>
   
